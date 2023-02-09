@@ -93,6 +93,7 @@ return new class extends Migration
             $table->string('operateur_create',20)->nullable();
             $table->string('operateur_valide',20)->nullable();
             $table->dateTime('date_valide_rejet')->nullable();
+
             $table->timestamps();
         });
     }
