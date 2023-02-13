@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('machines', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('numero_serie',50);
+            // $table->string('numero_serie',50);
             $table->integer('id_partenaire')->nullable();
             $table->integer('nombre_acces')->nullable()->default(0);
             $table->datetime('date_demande_inscription')->nullable();
