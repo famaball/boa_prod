@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('tracking_agence', function (Blueprint $table) {
+        Schema::create('tracking_agences', function (Blueprint $table) {
             $table->increments('id');
             $table->string('code_agence')->nullable();
             $table->dateTime('date_effet')->nullable();
@@ -49,6 +49,7 @@ return new class extends Migration
             $table->string('cle_cions_recep')->nullable();
             $table->string('cle_transport_fond_recep')->nullable();
             $table->timestamps();
+
         });
     }
 
@@ -59,6 +60,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tracking_agence');
+        Schema::dropIfExists('tracking_agences');
     }
 };

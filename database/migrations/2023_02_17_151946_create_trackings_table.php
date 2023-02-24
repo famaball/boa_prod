@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('tracking', function (Blueprint $table) {
+        Schema::create('trackings', function (Blueprint $table) {
             $table->increments('id');
             $table->string('code')->index();
             $table->string('station');
@@ -44,6 +44,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tracking');
+        Schema::dropIfExists('trackings');
     }
 };

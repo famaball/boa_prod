@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('tfa', function (Blueprint $table) {
+        Schema::create('tfas', function (Blueprint $table) {
             $table->increments('id');
             $table->string('otp_code_op')->index();
             $table->string('otp_secret')->nullable();
@@ -51,6 +51,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tfa');
+        Schema::dropIfExists('tfas');
     }
 };

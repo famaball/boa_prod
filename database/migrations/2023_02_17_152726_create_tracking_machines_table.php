@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('tracking_machine', function (Blueprint $table) {
+        Schema::create('tracking_machines', function (Blueprint $table) {
             $table->increments('id');
             $table->string('numero_serie');
             $table->dateTime('date_nta')->nullable();
@@ -31,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tracking_machine');
+        Schema::dropIfExists('tracking_machines');
     }
 };
