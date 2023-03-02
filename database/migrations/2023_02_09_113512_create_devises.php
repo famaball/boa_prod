@@ -15,14 +15,14 @@ return new class extends Migration
     {
         Schema::create('devises', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('titre',20);
-            $table->double('valeur_jour',20)->default(0);
-            $table->string('symbole',5);
-            $table->double('valeur_achat',20)->default(0);
-            $table->double('valeur_vente',20)->default(0);
-            $table->char('is_code_devise3',3)->nullable();
-            $table->string('code_devise_delta',3)->nullable();
-            $table->boolean('nb_arrondi',20)->default(0)->nullable();
+            $table->string('titre');
+            $table->double('valeur_jour')->default(0);
+            $table->string('symbole');
+            $table->double('valeur_achat')->default(0);
+            $table->double('valeur_vente')->default(0);
+            $table->char('is_code_devise3')->nullable();
+            $table->string('code_devise_delta')->nullable();
+            $table->boolean('nb_arrondi')->default(0)->nullable();
 
 
 

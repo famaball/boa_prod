@@ -19,7 +19,7 @@ return new class extends Migration
             $table->dateTime('date_effet')->nullable();
             $table->smallInteger('plafond_activer')->nullable();
             $table->dateTime('date_insertion')->nullable();
-            $table->string('code_operateur', 20)->nullable();
+            $table->string('code_operateur')->nullable();
             $table->double('plafond_maximum')->nullable()->default(0);
             $table->smallInteger('bloquer_emission')->nullable();
             $table->string('code_agence_specifique')->nullable()->default('');

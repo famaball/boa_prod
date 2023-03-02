@@ -16,14 +16,14 @@ return new class extends Migration
     {
         Schema::create('connectes_archives', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('var_code', 20)->index();
-            $table->string('last_activite', 100)->nullable();
-            $table->string('date_activite', 100)->nullable();
-            $table->string('numero_serie', 100)->index();
-            $table->string('session_id', 100)->index();
-            $table->string('session_uid', 100)->nullable();
+            $table->string('var_code')->index();
+            $table->string('last_activite')->nullable();
+            $table->string('date_activite')->nullable();
+            $table->string('numero_serie')->index();
+            $table->string('session_id')->index();
+            $table->string('session_uid')->nullable();
             $table->timestamp('date_insert')->default(DB::raw('CURRENT_TIMESTAMP'));
-            $table->string('description', 50)->nullable();
+            $table->string('description')->nullable();
             $table->timestamps();
         });
     }

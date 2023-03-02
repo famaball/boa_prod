@@ -52,7 +52,6 @@ return new class extends Migration
             $table->string('email_recepteur')->nullable();
             $table->smallInteger('genere')->nullable()->default('1');
             $table->smallInteger('traitement')->nullable();
-
             $table->string('message')->nullable();
             $table->string('autre_numero_transaction')->nullable();
             $table->char('devise_envoi')->nullable();

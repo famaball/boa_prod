@@ -17,11 +17,10 @@ return new class extends Migration
             $table->increments('id');
             $table->time('heure_debut')->nullable();
             $table->time('heure_fin')->nullable();
-            $table->string('structure',20)->nullable()->index();
+            $table->string('structure')->nullable()->index();
             $table->boolean('activer')->nullable()->default(0);
             $table->boolean('jour')->nullable()->default(0)->index();
-            $table->string('type_horaire',5)->nullable()->index();
-
+            $table->string('type_horaire')->nullable()->index();
             $table->timestamps();
         });
     }

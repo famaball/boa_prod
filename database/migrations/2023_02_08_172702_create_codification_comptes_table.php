@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('codification_comptes', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('code_nature_compte',5)->nullable();
-            $table->string('libelle_nature_compte',30)->nullable();
+            $table->string('code_nature_compte')->nullable();
+            $table->string('libelle_nature_compte')->nullable();
             $table->timestamps();
         });
     }

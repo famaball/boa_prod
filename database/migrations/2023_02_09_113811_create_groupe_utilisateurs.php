@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('groupe_utilisateurs', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('groupe',25);
-            $table->string('description',100);
+            $table->string('groupe');
+            $table->string('description');
             $table->timestamps();
         });
     }

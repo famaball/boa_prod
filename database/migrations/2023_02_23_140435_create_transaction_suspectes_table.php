@@ -20,7 +20,7 @@ return new class extends Migration
             $table->double('emission_devise')->default(0);
             $table->double('payement_devise')->default(0);
             $table->datetime('date_insert')->default('0000-00-00 00:00:00');
-            $table->smallInteger('TransmisAuPartenaire')->default(0)->nullable();
+            $table->smallInteger('transmis_au_partenaire')->default(0)->nullable();
             $table->string('structure_envoi')->index();
             $table->string('pays_destination')->nullable();
             $table->char('devise_emission')->nullable();

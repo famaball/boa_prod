@@ -15,15 +15,15 @@ return new class extends Migration
     {
         Schema::create('delta_account_agences', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('cle_transport_fond', 2)->nullable();
-            $table->string('cle_cions_envoi', 2)->nullable();
-            $table->string('cle_trf', 2)->nullable();
-            $table->string('cle_tva', 2)->nullable();
-            $table->string('cle_autre_taxe', 2)->nullable();
-            $table->string('cle_transit_acc', 2)->nullable();
-            $table->string('cle_credit_divers', 2)->nullable();
-            $table->string('cle_cions_recep', 2)->nullable();
-            $table->string('cle_transport_fond_recep', 2)->nullable();
+            $table->string('cle_transport_fond')->nullable();
+            $table->string('cle_cions_envoi')->nullable();
+            $table->string('cle_trf')->nullable();
+            $table->string('cle_tva')->nullable();
+            $table->string('cle_autre_taxe')->nullable();
+            $table->string('cle_transit_acc')->nullable();
+            $table->string('cle_credit_divers')->nullable();
+            $table->string('cle_cions_recep')->nullable();
+            $table->string('cle_transport_fond_recep')->nullable();
             $table->timestamps();
         });
     }

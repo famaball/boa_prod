@@ -15,21 +15,21 @@ return new class extends Migration
     {
         Schema::create('compense_archives', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('structure', 20);
-            $table->string('numero_compte', 50);
+            $table->string('structure');
+            $table->string('numero_compte');
             $table->timestamp('date_effet');
             $table->timestamp('date_compense');
             $table->double('montant')->default(0);
             $table->smallInteger('sens')->default(0);
             $table->double('plafond_emission')->default(0);
-            $table->string('numero_operation', 50);
+            $table->string('numero_operation');
             $table->smallInteger('type_variation')->default(0);
             $table->double('variation')->default(0);
             $table->smallInteger('activer')->default(0);
             $table->timestamp('date');
             $table->smallInteger('niveau')->default(0);
-            $table->string('observation', 250);
-            $table->string('operateur', 20);
+            $table->string('observation');
+            $table->string('operateur');
             $table->timestamps();
         });
     }

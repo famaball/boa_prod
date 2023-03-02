@@ -58,7 +58,6 @@ return new class extends Migration
             $table->double('part_e_process')->nullable()->default(0);
             $table->double('part_groupe')->nullable()->default(0);
             $table->double('part_marketing')->nullable()->default(0);
-
             $table->double('taxe_etat_ecobank')->default(0);
             $table->char('type_plafond_client')->default('000')->nullable();
             $table->double('plafond_emission_client_jour')->default(0)->nullable();
@@ -92,7 +91,6 @@ return new class extends Migration
             $table->double('part_promo_pdom_sag')->default(0)->nullable();
             $table->double('part_promo_edom_sag')->default(0)->nullable();
             $table->double('part_promo_eint')->default(0)->nullable();
-
             $table->double('part_promo_pint')->default(0)->nullable();
             $table->double('part_promo_pr_pint')->default(0)->nullable();
             $table->double('part_promo_pr_pint_sag')->default(0)->nullable();
@@ -163,7 +161,6 @@ return new class extends Migration
             $table->double('versement_devise_wl')->default(0)->nullable();
             $table->double('plafond_emission_cfa')->default(0)->nullable();
             $table->boolean('check_adr_mac_machine')->nullable();
-
             $table->boolean('check_multi_login')->default(0)->nullable();
             $table->double('taxe_beac')->default(0)->nullable();
             $table->double('montant_maxhzcemac')->default(0)->nullable();

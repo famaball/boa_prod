@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('territoire_risques', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->string('pays_source');
             $table->string('code_pays')->index();
             $table->string('designation');

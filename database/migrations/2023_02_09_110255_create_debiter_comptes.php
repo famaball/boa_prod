@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('debiter_comptes', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('numero_compte',20);
-            $table->string('numero_transaction',20);
+            $table->string('numero_compte');
+            $table->string('numero_transaction');
             $table->timestamps();
         });
     }

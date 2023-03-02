@@ -15,9 +15,9 @@ return new class extends Migration
     {
         Schema::create('compte_agences', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('chapitre_compte', 10)->nullable();
-            $table->string('compte_delta', 15)->nullable();
-            $table->string('cle_compte', 3)->nullable();
+            $table->string('chapitre_compte')->nullable();
+            $table->string('compte_delta')->nullable();
+            $table->string('cle_compte')->nullable();
             $table->timestamps();
         });
     }

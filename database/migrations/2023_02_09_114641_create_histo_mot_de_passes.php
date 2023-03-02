@@ -15,9 +15,9 @@ return new class extends Migration
     {
         Schema::create('histo_mot_de_passes', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('structure',20);
-            $table->string('code_operateur',20);
-            $table->string('mot_de_passe',70);
+            $table->string('structure');
+            $table->string('code_operateur');
+            $table->string('mot_de_passe');
             $table->timestamps();
         });
     }

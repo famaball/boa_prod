@@ -14,7 +14,6 @@ return new class extends Migration
     public function up()
     {
         Schema::create('plafond_client_bes', function (Blueprint $table) {
-            // $table->tinyIncrements('id');
             $table->increments('id');
             $table->string('source')->nullable()->index();
             $table->string('destination')->nullable();

@@ -14,8 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('plafond_transaction_bes', function (Blueprint $table) {
-            // $table->increments('id');
-            $table->tinyIncrements('id');
+            $table->increments('id');
             $table->string('source')->nullable()->index();
             $table->string('destination')->nullable();
             $table->integer('devise')->default(0);

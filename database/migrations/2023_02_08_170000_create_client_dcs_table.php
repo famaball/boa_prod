@@ -15,16 +15,16 @@ return new class extends Migration
     {
         Schema::create('client_dcs', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('code_client',20);
-            $table->string('numero_identification',20);
-            $table->string('nom',200);
-            $table->string('prenom',200);
-            $table->string('telephone',20);
-            $table->string('fax',20);
-            $table->string('adresse',250);
-            $table->string('code_postal',50);
-            $table->string('ville',50);
-            $table->string('pays',4);
+            $table->string('code_client');
+            $table->string('numero_identification');
+            $table->string('nom');
+            $table->string('prenom');
+            $table->string('telephone');
+            $table->string('fax');
+            $table->string('adresse');
+            $table->string('code_postal');
+            $table->string('ville');
+            $table->string('pays');
             $table->timestamps();
         });
     }

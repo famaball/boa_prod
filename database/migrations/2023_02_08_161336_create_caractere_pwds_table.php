@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('caractere_pwds', function (Blueprint $table) {
             $table->increments('id_caractere');
-            $table->string('symbole_caractere', 2);
+            $table->string('symbole_caractere');
             $table->boolean('activer');
             $table->timestamps();
         });

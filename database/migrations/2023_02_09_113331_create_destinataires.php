@@ -18,8 +18,8 @@ return new class extends Migration
             $table->datetime('date_emission')->default('0000-00-00 00:00:00');
             $table->datetime('date_reception')->default('0000-00-00 00:00:00');
             $table->smallInteger('etat')->default(0);
-            $table->string('code_message',20)->default(0);
-            $table->string('code_destinataire',20);
+            $table->string('code_message')->default(0);
+            $table->string('code_destinataire');
             $table->timestamps();
         });
     }

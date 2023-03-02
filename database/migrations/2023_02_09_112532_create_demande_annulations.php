@@ -15,18 +15,18 @@ return new class extends Migration
     {
         Schema::create('demande_annulations', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('numero_transaction', 20)->index();
-            $table->string('structure', 20)->nullable();
-            $table->string('code_op_demandeur', 20);
-            $table->string('code_op_validateur', 20);
+            $table->string('numero_transaction')->index();
+            $table->string('structure')->nullable();
+            $table->string('code_op_demandeur');
+            $table->string('code_op_validateur');
             $table->datetime('date_demande')->default('0000-00-00 00:00:00');
             $table->datetime('date_validation')->default('0000-00-00 00:00:00');
-            $table->string('motif_annullation', 100)->nullable();
+            $table->string('motif_annullation')->nullable();
             $table->tinyInteger('est_traitee')->unsigned()->default(0);
-            $table->char('type_transaction', 1)->nullable();
+            $table->char('type_transaction')->nullable();
             $table->integer('audit_log')->unsigned()->default(0);
-            $table->string('ip_demandeur', 30)->nullable();
-            $table->string('ip_validateur', 30)->nullable();
+            $table->string('ip_demandeur')->nullable();
+            $table->string('ip_validateur')->nullable();
             $table->timestamps();
         });
     }

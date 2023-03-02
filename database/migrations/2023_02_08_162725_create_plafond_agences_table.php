@@ -21,7 +21,7 @@ return new class extends Migration
             $table->double('plafond_e_semaine')->default(0)->nullable();
             $table->double('plafond_e_mois')->default(0)->nullable();
             $table->double('plafond_e_an')->default(0)->nullable();
-            $table->char('type_plafond_env', 4)->default('0000')->nullable();
+            $table->char('type_plafond_env')->default('0000')->nullable();
             $table->timestamps();
         });
     }

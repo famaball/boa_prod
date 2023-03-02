@@ -80,7 +80,6 @@ return new class extends Migration
             $table->double('part_payement')->default(0);
             $table->double('part_reseau')->default(0);
             $table->string('ref_trans')->nullable();
-
             $table->timestamps();
         });
     }

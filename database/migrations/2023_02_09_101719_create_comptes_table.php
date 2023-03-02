@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('comptes', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('numero_compte', 20);
+            $table->string('numero_compte');
             $table->double('montant')->default(0);
             $table->smallInteger('modifier')->default(0);
             $table->timestamps();

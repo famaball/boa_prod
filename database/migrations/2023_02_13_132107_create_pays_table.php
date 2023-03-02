@@ -29,8 +29,6 @@ return new class extends Migration
             $table->boolean('actif_vers_me')->nullable()->default(0);
             $table->boolean('alerte_sms')->default(0);
             $table->string('iso_code_num')->nullable();
-
-
             $table->timestamps();
         });
     }

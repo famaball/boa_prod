@@ -16,15 +16,15 @@ return new class extends Migration
     {
         Schema::create('histo_ctrl_transactions', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('numero_transaction',20);
-            $table->string('station',20);
+            $table->string('numero_transaction');
+            $table->string('station');
             $table->timestamp('date_insert')->default(DB::raw('CURRENT_TIMESTAMP'));
-            $table->string('page_origine',200)->default(0);
-            $table->string('host',50);
-            $table->string('sid',70);
-            $table->string('code_operateur',20);
+            $table->string('page_origine')->default(0);
+            $table->string('host');
+            $table->string('sid');
+            $table->string('code_operateur');
             $table->boolean('bloquer')->nullable()->default(0);
-            $table->string('motif_blocage',15)->nullable();
+            $table->string('motif_blocage')->nullable();
             $table->timestamps();
         });
     }

@@ -85,7 +85,6 @@ return new class extends Migration
             $table->double('code_agent_initiateur')->nullable();
             $table->char('symbole_devise_payement')->nullable();
             $table->char('symbole_devise_emission')->nullable();
-
             $table->double('part_etat_de')->default(0);
             $table->double('part_etat_dp')->default(0);
             $table->double('part_emission_de')->default(0);
@@ -103,7 +102,6 @@ return new class extends Migration
             $table->double('part_e_process')->default(0);
             $table->double('part_e_process_de')->default(0);
             $table->double('part_e_process_dp')->default(0);
-
             $table->smallInteger('transmis_au_partenaire')->nullable()->default(0)->index();
             $table->string('ref_bancaire_envoi')->nullable()->index();
             $table->string('ref_bancaire_payement')->nullable()->index();

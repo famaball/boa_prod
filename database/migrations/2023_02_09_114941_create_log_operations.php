@@ -15,20 +15,20 @@ return new class extends Migration
     {
         Schema::create('log_operations', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('code_operation',20)->nullable();
-            $table->string('libelle_operation',20)->nullable();
-            $table->string('structure',20)->nullable();
-            $table->string('agence',20)->nullable();
-            $table->string('code_operateur', 20);
+            $table->string('code_operation')->nullable();
+            $table->string('libelle_operation')->nullable();
+            $table->string('structure')->nullable();
+            $table->string('agence')->nullable();
+            $table->string('code_operateur');
             $table->string('numero_carte')->nullable();
-            $table->string('resultat', 20);
+            $table->string('resultat');
             $table->datetime('date_operation')->nullable()->default('0000-00-00 00:00:00');
-            $table->string('result_cryptogram',50)->nullable();
-            $table->string('transaction_reference',50)->nullable();
-            $table->string('etz_reference',50)->nullable();
-            $table->string('observations',50)->nullable();
-            $table->string('operation_key',100)->nullable();
-            $table->string('ref_transaction',20)->nullable();
+            $table->string('result_cryptogram')->nullable();
+            $table->string('transaction_reference')->nullable();
+            $table->string('etz_reference')->nullable();
+            $table->string('observations')->nullable();
+            $table->string('operation_key')->nullable();
+            $table->string('ref_transaction')->nullable();
             $table->timestamps();
         });
     }

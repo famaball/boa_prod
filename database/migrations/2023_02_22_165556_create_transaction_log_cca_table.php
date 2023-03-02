@@ -48,7 +48,6 @@ return new class extends Migration
             $table->string('adresse_recepteur');
             $table->string('ville_recepteur');
             $table->string('code_zip_recepteur')->nullable();
-
             $table->string('etat_recepteur')->nullable();
             $table->string('pays_recepteur');
             $table->string('email_recepteur')->nullable();
@@ -86,7 +85,6 @@ return new class extends Migration
             $table->string('lieu_naissance_emetteur')->nullable();
             $table->date('date_expiration_piece_emetteur')->nullable();
             $table->date('date_emission_piece_emetteur')->nullable();
-
             $table->string('nationalite_emetteur')->nullable();
             $table->string('profession_emetteur')->nullable();
             $table->string('telephone_portable_emetteur')->nullable();

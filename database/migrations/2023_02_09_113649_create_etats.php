@@ -15,9 +15,9 @@ return new class extends Migration
     {
         Schema::create('etats', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('pays',3)->nullable();
-            $table->string('code_etat',10)->nullable();
-            $table->string('designation',25)->nullable();
+            $table->string('pays')->nullable();
+            $table->string('code_etat')->nullable();
+            $table->string('designation')->nullable();
             $table->timestamps();
         });
     }

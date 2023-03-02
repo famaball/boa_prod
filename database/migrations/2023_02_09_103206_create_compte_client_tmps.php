@@ -16,12 +16,12 @@ return new class extends Migration
     {
         Schema::create('compte_client_tmps', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('code_banque', 10)->index();
-            $table->string('numero_compte', 70)->unique();
+            $table->string('code_banque')->index();
+            $table->string('numero_compte')->unique();
             $table->boolean('traite')->default(0)->nullable();
-            $table->string('numero_identification', 20)->index();
+            $table->string('numero_identification')->index();
             $table->timestamp('date_insert')->default(DB::raw('CURRENT_TIMESTAMP'));
-            $table->string('intitule', 70)->nullable();
+            $table->string('intitule')->nullable();
             $table->timestamps();
         });
     }

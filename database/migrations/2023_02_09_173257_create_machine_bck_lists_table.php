@@ -35,7 +35,6 @@ return new class extends Migration
            $table->string('adress_mac_machine')->nullable();
            $table->string('bios_serial_number')->nullable();
            $table->string('hdd_serial_number')->nullable();
-
            $table->timestamps();
         });
     }

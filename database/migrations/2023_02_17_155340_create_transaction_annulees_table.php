@@ -57,7 +57,6 @@ return new class extends Migration
             $table->string('agence_envoi')->index();
             $table->string('agence_payement')->index();
             $table->string('pays_payement')->index();
-
             $table->string('autre_numero_transaction')->nullable();
             $table->string('autre_numero_partenaire')->nullable();
             $table->string('ville_payement')->nullable();
@@ -102,7 +101,6 @@ return new class extends Migration
             $table->double('montant_beacus')->nullable()->default(0);
             $table->string('zone_destination')->nullable();
             $table->boolean('genere_e')->nullable()->default(0);
-
             $table->string('id_session_envoi')->nullable();
             $table->string('numero_serie_envoi')->nullable();
             $table->string('adr_ip_envoi')->nullable();
@@ -128,7 +126,6 @@ return new class extends Migration
             $table->string('on_hold')->nullable();
             $table->string('ip_validateur')->nullable();
             $table->char('symbole_devise_compense')->nullable();
-
             $table->string('partenaire_ref_sending')->nullable()->index();
             $table->string('code_operateur_envoi_ui')->nullable();
             $table->string('code_operateur_payement_ui')->nullable();

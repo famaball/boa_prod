@@ -20,7 +20,7 @@ return new class extends Migration
             $table->integer('devise_dest')->index();
             $table->double('cours_vente_off')->index();
             $table->double('cours_achat_off')->index();
-            $table->string('code_operateur',20);
+            $table->string('code_operateur');
             $table->datetime('date_insert')->nullable();
             $table->timestamps();
         });
