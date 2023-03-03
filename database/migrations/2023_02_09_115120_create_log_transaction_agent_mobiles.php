@@ -64,7 +64,7 @@ return new class extends Migration
             $table->string('pays_payement')->index();
             $table->double('cours_vente_off_dc')->default(0)->nullable();
             $table->double('cours_achat_off_dc')->default(0)->nullable();
-            $table->integer('devise_emission')->nullable();
+            $table->integer('devise_emission')->nullable()->index();
             $table->integer('devise_payement')->nullable();
             $table->tinyInteger('do_traiter')->default(0)->nullable();
             $table->smallInteger('compliance')->default(0)->nullable();

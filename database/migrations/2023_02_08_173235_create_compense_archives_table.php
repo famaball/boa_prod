@@ -17,8 +17,8 @@ return new class extends Migration
             $table->increments('id');
             $table->string('structure');
             $table->string('numero_compte');
-            $table->timestamp('date_effet');
-            $table->timestamp('date_compense');
+            $table->dateTime('date_effet')->default('0000-00-00 00:00:00');
+            $table->dateTime('date_compense')->default('0000-00-00 00:00:00');
             $table->double('montant')->default(0);
             $table->smallInteger('sens')->default(0);
             $table->double('plafond_emission')->default(0);
@@ -26,7 +26,7 @@ return new class extends Migration
             $table->smallInteger('type_variation')->default(0);
             $table->double('variation')->default(0);
             $table->smallInteger('activer')->default(0);
-            $table->timestamp('date');
+            $table->dateTime('date')->default('0000-00-00 00:00:00');
             $table->smallInteger('niveau')->default(0);
             $table->string('observation');
             $table->string('operateur');

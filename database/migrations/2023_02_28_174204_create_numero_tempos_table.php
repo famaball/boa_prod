@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('numero_tempos', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('numero')->unique();
+            $table->string('numero');
             $table->dateTime('date_generation')->default('0000-00-00 00:00:00');
             $table->dateTime('date_reservation')->default('0000-00-00 00:00:00');
             $table->integer('deja_pris')->default(0);

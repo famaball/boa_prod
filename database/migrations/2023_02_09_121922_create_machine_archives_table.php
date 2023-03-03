@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('machine_archives', function (Blueprint $table) {
             $table->increments('id');
             // $table->string('numero_serie')->primary();
+            $table->string('numero_serie');
             $table->integer('id_partenaire')->nullable();
             $table->integer('nombre_acess')->nullable()->default(0);
             $table->datetime('date_demande_inscription')->nullable();

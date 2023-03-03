@@ -23,14 +23,14 @@ return new class extends Migration
             $table->string('region');
             $table->boolean('equipe')->default(1);
             $table->string('agence_r')->nullable();
-            $table->string('code_agence_specifique')->nullable();
-            $table->string('adresse')->nullable();
-            $table->smallInteger('repliquer')->default(0)->nullable();
-            $table->smallInteger('bloquer_emission')->default(0)->nullable();
-            $table->smallInteger('bloquer_payement')->default(0)->nullable();
+            $table->string('code_agence_specifique');
+            $table->string('adresse');
+            $table->smallInteger('repliquer')->default(0);
+            $table->smallInteger('bloquer_emission')->default(0);
+            // $table->smallInteger('bloquer_payement')->default(0)->nullable();
 
-            $table->smallInteger('plafond_activer')->default(0)->nullable();
-            $table->double('plafond')->default(2000)->nullable();
+            $table->smallInteger('plafond_activer')->default(0);
+            $table->double('plafond')->default(2000);
             $table->dateTime('date_effet')->nullable();
             $table->boolean('active')->default(1);
             $table->double('cumul')->default(0);

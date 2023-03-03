@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('machine_bck_lists', function (Blueprint $table) {
             $table->increments('id');
            // $table->string('numero_serie')->primary();
+           $table->string('numero_serie');
            $table->integer('id_partenaire')->nullable();
            $table->integer('nombre_acess')->nullable()->default(0);
            $table->datetime('date_demande_inscription')->nullable();
@@ -31,7 +32,7 @@ return new class extends Migration
            $table->boolean('m_link')->nullable()->default(-1);
            $table->boolean('est_active')->nullable()->default(0);
            $table->boolean('bck_list')->nullable()->default(0);
-           $table->string('identity_machine')->nullable()->default(0)->index();
+           $table->string('identity_machine')->nullable()->index();
            $table->string('adress_mac_machine')->nullable();
            $table->string('bios_serial_number')->nullable();
            $table->string('hdd_serial_number')->nullable();

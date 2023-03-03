@@ -19,8 +19,8 @@ return new class extends Migration
             $table->string('numero_transaction')->index();
             $table->text('motif');
             $table->timestamp('date_insert')->default(DB::raw('CURRENT_TIMESTAMP'));
-            $table->string('operateur_rejet');
-            $table->char('type_operation')->index();
+            $table->string('operateur_rejet')->nullable();
+            $table->char('type_operation')->nullable();
             $table->timestamps();
         });
     }

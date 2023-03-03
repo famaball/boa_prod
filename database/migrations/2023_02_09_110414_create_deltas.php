@@ -34,7 +34,7 @@ return new class extends Migration
             $table->string('structure')->index()->nullable();
             $table->string('response_code')->nullable();
             $table->string('f_t_number')->index()->nullable();
-            $table->double('f_t_amount')->nullable();
+            $table->double('f_t_amount')->nullable()->default(0);
             $table->string('query')->index()->nullable();
             $table->string('query_type')->index()->nullable();
             $table->string('query_e_code')->nullable();
@@ -52,8 +52,8 @@ return new class extends Migration
             $table->string('a_c_query_e_desc')->nullable();
             $table->boolean('ref_and_a_c_c_valid')->default(0);
             $table->string('r_t_number')->index()->nullable();
-            $table->smallInteger('nature_operation')->nullable();
-            $table->tinyInteger('type_ransaction')->nullable()->default(0);
+            $table->smallInteger('nature_operation')->nullable()->default(0);
+            $table->boolean('type_transaction')->nullable()->default(0);
             $table->string('structure_payement')->nullable()->index();
             $table->string('branch_payement')->nullable();
             $table->string('branch_envoi')->nullable();

@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('demande_annulations', function (Blueprint $table) {
+        Schema::create('demande_annulation_transactions', function (Blueprint $table) {
             $table->increments('id');
             $table->string('numero_transaction')->index();
             $table->string('structure')->nullable();
@@ -22,9 +22,9 @@ return new class extends Migration
             $table->datetime('date_demande')->default('0000-00-00 00:00:00');
             $table->datetime('date_validation')->default('0000-00-00 00:00:00');
             $table->string('motif_annullation')->nullable();
-            $table->tinyInteger('est_traitee')->unsigned()->default(0);
+            $table->boolean('est_traitee')->default(0)->nullable()->index();
             $table->char('type_transaction')->nullable();
-            $table->integer('audit_log')->unsigned()->default(0);
+            $table->integer('audit_log')->default(0)->nullable();
             $table->string('ip_demandeur')->nullable();
             $table->string('ip_validateur')->nullable();
             $table->timestamps();
@@ -38,6 +38,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('demande_annulations');
+        Schema::dropIfExists('demande_annulation_transactions');
     }
 };

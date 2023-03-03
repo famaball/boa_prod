@@ -30,9 +30,10 @@ return new class extends Migration
             $table->string('code_zip');
             $table->string('etat');
             $table->string('numero_piece')->index();
-            $table->date('date_naissance');
+            $table->date('date_naissance')->default(0000-00-00);
             $table->string('lieu_naissance');
             $table->string('nom_mere');
+            // $table->increments('increment')->index();
             $table->integer('increment')->index();
             $table->string('nationalite');
             $table->string('genre');

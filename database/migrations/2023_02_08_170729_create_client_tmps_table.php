@@ -16,7 +16,7 @@ return new class extends Migration
     {
         Schema::create('client_tmps', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('numero_identification')->unique();
+            $table->string('numero_identification')->index();
             $table->string('nom');
             $table->string('prenom');
             $table->string('telephone')->index();
@@ -52,7 +52,7 @@ return new class extends Migration
             $table->string('id_code_client')->nullable();
             $table->string('code_ville_residence')->nullable();
             $table->string('code_province_residence')->nullable();
-            $table->string('pays_naissance')->nullable()->index();
+            $table->string('pays_naissance')->nullable();
             $table->string('code_fiscale')->nullable();
             $table->string('numero_carte')->nullable();
             $table->boolean('telephone_traite')->default(0)->nullable();

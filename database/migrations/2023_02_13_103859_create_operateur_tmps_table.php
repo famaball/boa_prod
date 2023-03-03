@@ -27,7 +27,7 @@ return new class extends Migration
             $table->smallInteger('groupe')->default(0);
             $table->string('agence');
             $table->double('max_montant')->default(0)->nullable();
-            $table->string('ancien')->default(0);
+            $table->string('ancien');
             $table->string('pin_emission')->nullable()->default('sdfUIOZ88777EAZUIAA4');
             $table->boolean('compliance')->nullable()->default(0);
             $table->datetime('date_derniere_access')->nullable()->default('0000-00-00 00:00:00');
@@ -44,7 +44,7 @@ return new class extends Migration
             $table->string('id_transfert')->nullable();
             $table->boolean('auto_compense')->nullable()->default(0);
             $table->tinyInteger('valider_change')->nullable()->default(0);
-            $table->string('type_plafond_env')->nullable()->default(0000);
+            $table->string('type_plafond_env')->nullable()->default('0000');
             $table->double('plafond_e_jour')->nullable()->default(0);
             $table->double('plafond_e_semaine')->nullable()->default(0);
             $table->double('plafond_e_mois')->nullable()->default(0);

@@ -23,9 +23,9 @@ return new class extends Migration
             $table->double('montant_limite')->default(0);
             $table->string('compte_transitoire');
             $table->string('code_banque');
-            $table->integer('devise');
+            $table->integer('devise')->default(0);
             $table->double('valeur_achat');
-            $table->double('valeur_vente');
+            $table->double('valeur_vente')->default(0);
             $table->string('langue')->default('francais');
             $table->double('taxe_etat')->default(0);
             $table->double('part_emission')->default(0);
@@ -39,8 +39,8 @@ return new class extends Migration
             $table->double('decote')->default(0);
             $table->string('sous_reseau');
             $table->string('symbole_monnaie')->default('CFA');
-            $table->tinyInteger('compte_active')->default(0);
-            $table->tinyInteger('bloquer_emission')->default(0);
+            $table->smallInteger('compte_active')->default(0);
+            $table->smallInteger('bloquer_emission')->default(0);
             $table->double('plafond_emission')->default(5000000);
             $table->smallInteger('type_reseau')->default(0);
             $table->smallInteger('type_repartition')->default(0);
@@ -128,7 +128,7 @@ return new class extends Migration
             $table->double('part_payement_facture')->default(0)->nullable();
             $table->double('part_vente_credit')->default(0)->nullable();
             $table->double('part_deposit_nafa')->default(0)->nullable();
-            $table->boolean('mode_white_label')->default(0);
+            $table->boolean('mode_white_label')->default(0)->nullable();
             $table->double('montant_max_par_compense')->default(0)->nullable();
             $table->double('montant_max_par_semaine')->default(0)->nullable();
             $table->double('cumul_compense_eff')->default(0)->nullable();
@@ -160,7 +160,7 @@ return new class extends Migration
             $table->string('operateur_wl')->nullable();
             $table->double('versement_devise_wl')->default(0)->nullable();
             $table->double('plafond_emission_cfa')->default(0)->nullable();
-            $table->boolean('check_adr_mac_machine')->nullable();
+            $table->boolean('check_adr_mac_machine')->nullable()->default(0);
             $table->boolean('check_multi_login')->default(0)->nullable();
             $table->double('taxe_beac')->default(0)->nullable();
             $table->double('montant_maxhzcemac')->default(0)->nullable();
@@ -178,7 +178,7 @@ return new class extends Migration
             $table->double('plafond_emission_structure_semaine')->default(0)->nullable();
             $table->double('plafond_emission_structure_mois')->default(0)->nullable();
             $table->double('plafond_emission_structure_an')->default(0)->nullable();
-            $table->char('type_plafond_est')->default('0000');
+            $table->char('type_plafond_est')->default('0000')->nullable();
             $table->double('plafond_emission_agen_jour')->default(0)->nullable();
             $table->double('plafond_emission_agen_semaine')->default(0)->nullable();
             $table->double('plafond_emission_agen_mois')->default(0)->nullable();

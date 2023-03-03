@@ -16,7 +16,7 @@ return new class extends Migration
     {
         Schema::create('correspondance_taxe_frais', function (Blueprint $table) {
             $table->increments('id');
-            $table->double('taux')->nullable();
+            $table->double('taux', 25, 15)->nullable();
             $table->double('montant')->default(0);
             $table->string('zone')->index();
             $table->boolean('mode')->index()->default(0);
@@ -30,7 +30,7 @@ return new class extends Migration
             $table->timestamp('date_validation')->default('0000-00-00 00:00:00');
             $table->string('code_tarif')->nullable();
             $table->boolean('status')->default(0);
-            $table->double('taux_ht')->nullable();
+            $table->double('taux_ht', 25 , 15)->nullable();
             $table->timestamps();
         });
     }

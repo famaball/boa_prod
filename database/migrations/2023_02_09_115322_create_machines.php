@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('machines', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('numero_serie');
             // $table->string('numero_serie')->primary();
             $table->integer('id_partenaire')->nullable();
             $table->integer('nombre_acces')->nullable()->default(0);
@@ -30,8 +31,9 @@ return new class extends Migration
             $table->string('structure')->nullable();
             $table->boolean('m_link')->nullable()->default(-1);
             $table->boolean('est_active')->nullable()->default(1);
-            $table->boolean('bck_list')->default(0);
+            $table->boolean('bck_list')->default(0)->nullable();
             $table->string('ip_adr_validation')->nullable();
+            $table->string('numero_serie_validation')->nullable();
             $table->string('n_sess_validation')->nullable();
             $table->string('pin_validation')->nullable();
             $table->datetime('date_mail_demande_valide')->nullable();

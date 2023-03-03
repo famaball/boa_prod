@@ -16,6 +16,7 @@ return new class extends Migration
     {
         Schema::create('operateurs', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('code_operateur');
             // $table->string('code_operateur')->primary();
             $table->string('profil')->unique();
             $table->string('mot_de_passe')->default('sdfjk554dfhjhjzaazeahkazUIOZ88777EAZUIAA4');

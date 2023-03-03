@@ -25,7 +25,7 @@ return new class extends Migration
             $table->datetime('date_demande')->default('0000-00-00 00:00:00');
             $table->string('code_autorisateur')->nullable();
             $table->string('observations')->nullable();
-            $table->string('numero_transaction')->nullable();
+            $table->string('numero_transaction')->nullable()->index();
             $table->boolean('est_traitee')->default(0);
             $table->string('ancien_numero_compte')->nullable();
             $table->string('new_numero_compte')->nullable();

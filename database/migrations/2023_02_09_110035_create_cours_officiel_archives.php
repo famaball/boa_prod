@@ -18,8 +18,8 @@ return new class extends Migration
             $table->date('date_entree')->nullable()->index()->default(0000-00-00);
             $table->integer('devise_source')->index();
             $table->integer('devise_dest')->index();
-            $table->double('cours_vente_off')->index();
-            $table->double('cours_achat_off')->index();
+            $table->double('cours_vente_off');
+            $table->double('cours_achat_off');
             $table->string('code_operateur');
             $table->datetime('date_insert')->nullable();
             $table->timestamps();

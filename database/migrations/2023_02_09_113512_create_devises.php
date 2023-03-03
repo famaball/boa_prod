@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('symbole');
             $table->double('valeur_achat')->default(0);
             $table->double('valeur_vente')->default(0);
-            $table->char('is_code_devise3')->nullable();
+            $table->char('iso_code_devise3')->nullable();
             $table->string('code_devise_delta')->nullable();
             $table->boolean('nb_arrondi')->default(0)->nullable();
 

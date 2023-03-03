@@ -15,9 +15,15 @@ return new class extends Migration
     {
         Schema::create('compte_agences', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('chapitre_compte')->nullable();
-            $table->string('compte_delta')->nullable();
+            $table->string('agence_master')->nullable();
+            $table->string('codification_compte')->nullable()->index();
+            $table->string('chapitre')->nullable();
+            $table->string('compte')->nullable();
             $table->string('cle_compte')->nullable();
+            $table->string('libelle_compte')->nullable();
+            $table->string('nature_compte')->nullable();
+            $table->boolean('est_validee')->nullable()->default(0);
+
             $table->timestamps();
         });
     }
