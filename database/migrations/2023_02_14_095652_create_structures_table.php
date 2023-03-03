@@ -207,6 +207,8 @@ return new class extends Migration
             $table->boolean('activate_2_fa')->default(0)->nullable();
             $table->boolean('is_business')->default(0)->nullable();
             $table->timestamps();
+            // $table->timestamps();
+
         });
     }
 
