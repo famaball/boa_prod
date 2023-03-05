@@ -36,6 +36,7 @@ return new class extends Migration
             $table->string('telephone_emetteur')->nullable();
             $table->string('fax_emetteur')->nullable();
             $table->string('adresse_emetteur')->nullable();
+            $table->string('ville_emetteur')->nullable();
             $table->string('code_zip_emetteur')->nullable();
             $table->string('etat_emetteur')->nullable();
             $table->string('pays_emetteur')->nullable();
@@ -58,14 +59,14 @@ return new class extends Migration
             $table->char('devise_payement')->nullable();
             $table->dateTime('date_insertion')->default('0000-00-00 00:00:00');
             $table->string('code_agence_de_partenaire')->nullable();
-            $table->integer('transmis_au_partenaire')->default(0);
-            $table->char('confirmation_tr');
+            $table->integer('transmis_au_partenaire')->default(0)->nullable();
+            $table->char('confirmation_tr')->default('non');
             $table->string('code_operateur_payement')->nullable();
             $table->string('id_agent_payement')->nullable();
             $table->double('montant_en_euro')->nullable();
             $table->double('commission_en_euro')->nullable();
             $table->boolean('rappro_cfa')->nullable();
-            $table->boolean('lu')->default(0);
+            $table->boolean('lu')->default(0)->nullable();
             $table->string('id_emetteur')->nullable();
             $table->string('id_recepteur')->nullable();
             $table->char('pays_envoi')->nullable();

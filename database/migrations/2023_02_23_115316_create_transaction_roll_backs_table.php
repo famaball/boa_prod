@@ -35,7 +35,7 @@ return new class extends Migration
             $table->boolean('etat_transaction')->nullable()->default(0);
             $table->char('pays_destination')->nullable();
             $table->string('code_agence_retrait');
-            $table->char('type_piece')->nullable();
+            $table->char('type_piece');
             $table->string('numero_piece');
             $table->boolean('faxer')->default(0);
             $table->boolean('contrainte')->default(0);
@@ -47,7 +47,7 @@ return new class extends Migration
             $table->tinyInteger('rejet')->default(0);
             $table->string('autre_numero_transaction')->index();
             $table->char('partenaire')->nullable()->default('00');
-            $table->double('taux_change')->nullable()->default(0.0000000);
+            $table->double('taux_change', 15 , 7)->nullable()->default(0.0000000);
             $table->smallInteger('demande_debit_credit')->default(0);
             $table->smallInteger('confirmer_debit_credit')->default(0);
             $table->smallInteger('repliquer')->default(0);
@@ -81,8 +81,8 @@ return new class extends Migration
             $table->double('commission_partenaire')->nullable()->default(0);
             $table->string('autre_numero_partenaire')->nullable();
             $table->smallInteger('compliance')->default(0);
-            $table->string('raison')->default(0);
-            $table->double('code_agent_initiateur')->nullable();
+            $table->string('raison');
+            $table->string('code_agent_initiateur')->nullable();
             $table->char('symbole_devise_payement')->nullable();
             $table->char('symbole_devise_emission')->nullable();
             $table->double('part_etat_de')->default(0);
@@ -102,9 +102,9 @@ return new class extends Migration
             $table->double('part_e_process')->default(0);
             $table->double('part_e_process_de')->default(0);
             $table->double('part_e_process_dp')->default(0);
-            $table->smallInteger('transmis_au_partenaire')->nullable()->default(0)->index();
-            $table->string('ref_bancaire_envoi')->nullable()->index();
-            $table->string('ref_bancaire_payement')->nullable()->index();
+            $table->smallInteger('transmis_au_partenaire')->nullable()->default(0);
+            $table->string('ref_bancaire_envoi')->nullable();
+            $table->string('ref_bancaire_payement')->nullable();
             $table->double('montant_us')->nullable()->default(0);
             $table->double('commission_us')->nullable()->default(0);
             $table->double('part_emission_us')->nullable()->default(0);
@@ -114,8 +114,8 @@ return new class extends Migration
             $table->double('part_e_process_us')->nullable()->default(0);
             $table->double('part_groupe_us')->nullable()->default(0);
             $table->double('part_marketing_us')->nullable()->default(0);
-            $table->double('taux_change_us')->nullable()->default(0.0000000);
-            $table->double('taux_change_eur')->nullable()->default(0.0000000);
+            $table->double('taux_change_us', 15 , 7)->nullable()->default(0.0000000);
+            $table->double('taux_change_eur', 15 , 7)->nullable()->default(0.0000000);
             $table->dateTime('payee_le')->nullable()->default('0000-00-00 00:00:00');
             $table->string('payee_par')->nullable();
             $table->double('montant_ttf')->nullable()->default(0);
@@ -153,8 +153,8 @@ return new class extends Migration
             $table->string('ref_trans')->nullable()->index();
             $table->string('code_operateur_validation')->nullable();
             $table->double('part_etat_de_default')->nullable();
-            $table->double('part_etat_us_default')->nullable();
-            $table->double('part_etat_default')->nullable();
+            $table->double('part_etat_us_default', 15 , 7)->nullable();
+            $table->double('part_etat_default', 15 , 7)->nullable();
             $table->smallInteger('douteuse')->nullable()->default(0);
             $table->string('correspondant')->nullable();
             $table->string('code_agence_correspondant')->nullable();

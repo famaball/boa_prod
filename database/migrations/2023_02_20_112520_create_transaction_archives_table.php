@@ -47,8 +47,8 @@ return new class extends Migration
             $table->double('taxe_devise')->default(0);
             $table->tinyInteger('rejet')->default(0);
             $table->string('autre_numero_transaction')->index();
-            $table->char('partenaire')->nullable()->default(00);
-            $table->double('taux_change')->nullable()->default(0.0000000);
+            $table->char('partenaire')->nullable()->default('00');
+            $table->double('taux_change', 15 , 7)->nullable()->default(0.0000000);
             $table->smallInteger('demande_debit_credit')->default(0);
             $table->smallInteger('confirmer_debit_credit')->default(0);
             $table->smallInteger('repliquer')->default(0);
@@ -115,8 +115,8 @@ return new class extends Migration
             $table->double('part_e_process_us')->nullable()->default(0);
             $table->double('part_groupe_us')->nullable()->default(0);
             $table->double('part_marketing_us')->nullable()->default(0);
-            $table->double('taux_change_us')->nullable()->default(0.0000000);
-            $table->double('taux_change_eur')->nullable()->default(0.0000000);
+            $table->double('taux_change_us', 15 , 7)->nullable()->default(0.0000000);
+            $table->double('taux_change_eur', 15 , 7)->nullable()->default(0.0000000);
             $table->dateTime('payee_le')->nullable()->default('0000-00-00 00:00:00');
             $table->string('payee_par')->nullable();
             $table->double('montant_ttf')->nullable()->default(0);
@@ -154,8 +154,8 @@ return new class extends Migration
             $table->string('ref_trans')->nullable()->index();
             $table->string('code_operateur_validation')->nullable();
             $table->double('part_etat_de_default')->nullable();
-            $table->double('part_etat_us_default')->nullable();
-            $table->double('part_etat_default')->nullable();
+            $table->double('part_etat_us_default', 15 , 7)->nullable();
+            $table->double('part_etat_default', 15 , 7)->nullable();
             $table->smallInteger('douteuse')->nullable()->default(0);
             $table->string('correspondant')->nullable();
             $table->string('code_agence_correspondant')->nullable();

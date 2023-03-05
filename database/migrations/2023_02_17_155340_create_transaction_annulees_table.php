@@ -20,7 +20,7 @@ return new class extends Migration
             $table->double('taxe')->default(0);
             $table->double('frais')->default(0);
             $table->double('frais_tel_ou_liv')->default(0);
-            $table->dateTime('date_depot')->default('0000-00-00 00:00:00')->index();
+            $table->dateTime('date_depot')->default('0000-00-00 00:00:00');
             $table->dateTime('date_payement')->default('0000-00-00 00:00:00');
             $table->smallInteger('delai')->default(0);
             $table->string('client_a_identifier');
@@ -30,8 +30,8 @@ return new class extends Migration
             $table->string('reponse_secrete');
             $table->string('id_emetteur')->nullable()->default(0);
             $table->string('id_recepteur')->nullable()->default(0);
-            $table->string('code_operateur_depot')->index();
-            $table->string('code_operateur_payement')->nullable()->index();
+            $table->string('code_operateur_depot');
+            $table->string('code_operateur_payement')->nullable();
             $table->boolean('retour')->default(0);
             $table->boolean('type_transaction')->nullable()->default(1);
             $table->char('pays_destination');
@@ -115,7 +115,7 @@ return new class extends Migration
             $table->string('id_code_trans')->nullable();
             $table->string('code_agence_correspondant')->nullable();
             $table->string('correspondant')->nullable();
-            $table->boolean('douteuse')->default(0);
+            $table->smallInteger('douteuse')->default(0)->nullable();
             $table->char('on_hold_raison')->nullable();
             $table->string('numero_carte_benef')->nullable();
             $table->string('message')->nullable();

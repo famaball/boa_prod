@@ -49,7 +49,7 @@ return new class extends Migration
             $table->string('code_operateur_de_depot')->nullable();
             $table->boolean('lu')->nullable()->default(0);
             $table->char('type_rejet')->nullable();
-            $table->string('ref_trans')->nullable();
+            $table->string('ref_trans')->nullable()->index();
             $table->string('code_agence_credit')->nullable();
             $table->string('code_structure_credit')->nullable();
             $table->string('code_agence_debit')->nullable();

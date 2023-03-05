@@ -18,10 +18,10 @@ return new class extends Migration
             $table->string('code')->index();
             $table->string('station');
             $table->dateTime('date')->index()->default('0000-00-00 00:00:00');
-            $table->string('page_origine');
+            $table->string('page_origine')->default(0);
             $table->string('page_demande');
             $table->string('host');
-            $table->integer('port');
+            $table->integer('port')->default(0);
             $table->string('user_agent');
             $table->string('sid');
             $table->string('numero_serie')->nullable();
