@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('devise_cible');
             $table->double('valeur')->default(0)->nullable();
             $table->timestamp('date_insert')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
-            $table->tinyInteger('statut')->nullable()->default(0);
+            $table->boolean('statut')->nullable()->default(0);
             $table->string('loader');
             $table->timestamp('upload_date')->default('0000-00-00 00:00:00');
             $table->double('valeur_nv')->default(0)->nullable();

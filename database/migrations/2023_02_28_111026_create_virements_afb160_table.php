@@ -17,7 +17,7 @@ return new class extends Migration
             $table->increments('id');
             $table->string('code_devise');
             $table->double('montant')->default(0);
-            $table->double('pays_virement');
+            $table->string('pays_virement');
             $table->string('code_agence');
             $table->string('code_structure');
             $table->string('numero_transaction');
